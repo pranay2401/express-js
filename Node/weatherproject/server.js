@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
 app.post("/", function (req, resp) {
   const city = req.body.city
   if (city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=3059eb7e239cbbd23838b9dde7396dec`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=<api-key>`
 
     https.get(url, function(response) {
       console.log(response.statusCode)
